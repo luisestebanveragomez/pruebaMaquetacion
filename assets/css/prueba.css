@@ -1,0 +1,359 @@
+/*-----------------------------------------------------------
+* Nombre del proyecto: 
+* Nombre del archivo:  
+* Descripción: hoja de estilos global
+* Fecha de creación: __ de abril - de 2014
+* Autor: Esteban Vera
+* Correo: esteban.vg@outlook.com, esteban.vera@imagina.co
+
+------------------------------------------------------------*/
+/*--------------------COMENTARIOS-----------------------------
+* Ancho: 1000px
+* Parallax: No
+* Responsivo: No
+-------------------------------------------------------------*/
+/**
+ * CONTENIDO...........Lo está leyendo!!
+ * RESET...............Establece los valores iniciales
+ * FONT-FACE...........Importamos fuentes de iconos y font-face
+ * NIB.................Mixins para stylus
+ * VARIABLES...........Colores que se van a utilizar en la página
+ * MIXINS..............Funciones globales que se van a utilizar en stylus
+ * CLASES GLOBALES.....Clases que se van a utilizar en el html
+ * POP-UPS.............Estilos para los pop-ups
+ * Body y Container....Estilos body y base de la página
+ * Loader..............Estilos loading de la página
+ * Header..............Estilos encabezado de la página
+ * Internas............Estilos internas
+ * Footer..............Estilos pie de página
+ */
+/*------------------------------------*\
+    $RESET
+\*------------------------------------*/
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+body {
+  line-height: 1;
+}
+* {
+  outline: none;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+nav ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  text-decoration: none;
+}
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+del {
+  text-decoration: line-through;
+}
+abbr[title],
+dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+input,
+select {
+  vertical-align: middle;
+}
+p {
+  line-height: 20px;
+  margin: 0 0 1em 0;
+}
+img {
+  vertical-align: top;
+  margin: 0;
+}
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:after {
+  clear: both;
+}
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+/*------------------------------------*\
+    $FONT-FACE
+\*------------------------------------*/
+@font-face {
+  font-family: 'latoregular';
+  src: url("../fuentes/lato-reg.eot");
+  src: url("../fuentes/lato-reg.eot?#iefix") format('embedded-opentype'), url("../fuentes/lato-reg.woff") format('woff'), url("../fuentes/lato-reg.ttf") format('truetype'), url("../fuentes/lato-reg.svg#latoregular") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'latolight';
+  src: url("../fuentes/lato-lig.eot");
+  src: url("../fuentes/lato-lig.eot?#iefix") format('embedded-opentype'), url("../fuentes/lato-lig.woff") format('woff'), url("../fuentes/lato-lig.ttf") format('truetype'), url("../fuentes/lato-lig.svg#latolight") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/*------------------------------------*\
+    $NIB
+\*------------------------------------*/
+/*------------------------------------*\
+    $variables
+\*------------------------------------*/
+/*------------------------------------*\
+    $MIXINS
+\*------------------------------------*/
+/*------------------------------------*\
+    $CLASES GLOBALES
+\*------------------------------------*/
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+.border {
+  border: 1px solid rojo;
+}
+.clear {
+  clear: both;
+}
+.relative {
+  position: relative;
+}
+.padding {
+  padding: 1em;
+}
+/*------------------------------------*\
+    $POP-UPS
+\*------------------------------------*/
+/*------------------------------------*\
+    $BODY Y CONTAINER
+\*------------------------------------*/
+body {
+  background: #fff;
+  color: #333;
+  font-family: 'aeroregular', sans-serif;
+}
+.wrapper {
+  width: 1000px;
+  margin: 0 auto;
+  display: block;
+}
+/*------------------------------------*\
+    $LOADER
+\*------------------------------------*/
+/*------------------------------------*\
+    $HEADER
+\*------------------------------------*/
+header {
+  -webkit-box-shadow: #ccc 4px 0px 4px;
+  box-shadow: #ccc 4px 0px 4px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  background: #fff;
+}
+h1 {
+  float: left;
+  margin-top: 11px;
+}
+nav {
+  float: right;
+}
+nav li {
+  float: left;
+}
+nav a {
+  text-transform: uppercase;
+  color: #333;
+  border-bottom: 2px solid transparent;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -moz-transition: 0.3s;
+  transition: 0.3s;
+  height: 55px;
+  line-height: 55px;
+  padding: 0 10px;
+  display: block;
+}
+nav a:hover,
+nav a:active {
+  border-color: #333;
+}
+/*------------------------------------*\
+    $HOME
+\*------------------------------------*/
+.contenedor-slider {
+  position: relative;
+  height: 700px;
+  overflow: hidden;
+}
+.contenedor-slider .owl-prev,
+.contenedor-slider .owl-next {
+  position: absolute;
+  top: 45%;
+  width: 73px;
+  height: 90px;
+  z-index: 999;
+  background: url("../imgs/slider/flecha.png") 0 0 no-repeat;
+  margin-top: -46px;
+  text-indent: -9999px;
+  cursor: pointer;
+}
+.contenedor-slider .owl-prev {
+  left: 2%;
+}
+.contenedor-slider .owl-next {
+  background-position: -97px 0;
+  right: 2%;
+}
+/*------------------------------------*\
+    $FOOTER
+\*------------------------------------*/
+footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+}
+footer a {
+  color: #fff;
+}
+footer a:hover {
+  text-decoration: underline;
+}
+footer p {
+  margin: 0;
+}
+/*------------------------------------*\
+    $MEDIAQUIERIES
+\*------------------------------------*/

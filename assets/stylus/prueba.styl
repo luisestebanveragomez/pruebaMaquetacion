@@ -1,0 +1,260 @@
+/*-----------------------------------------------------------
+* Nombre del proyecto: 
+* Nombre del archivo:  
+* Descripción: hoja de estilos global
+* Fecha de creación: __ de abril - de 2014
+* Autor: Esteban Vera
+* Correo: esteban.vg@outlook.com, esteban.vera@imagina.co
+
+------------------------------------------------------------*/
+/*--------------------COMENTARIOS-----------------------------
+* Ancho: 1000px
+* Parallax: No
+* Responsivo: No
+-------------------------------------------------------------*/
+
+/**
+ * CONTENIDO...........Lo está leyendo!!
+ * RESET...............Establece los valores iniciales
+ * FONT-FACE...........Importamos fuentes de iconos y font-face
+ * NIB.................Mixins para stylus
+ * VARIABLES...........Colores que se van a utilizar en la página
+ * MIXINS..............Funciones globales que se van a utilizar en stylus
+ * CLASES GLOBALES.....Clases que se van a utilizar en el html
+ * POP-UPS.............Estilos para los pop-ups
+ * Body y Container....Estilos body y base de la página
+ * Loader..............Estilos loading de la página
+ * Header..............Estilos encabezado de la página
+ * Internas............Estilos internas
+ * Footer..............Estilos pie de página
+ */
+
+
+
+
+/*------------------------------------*\
+    $RESET
+\*------------------------------------*/
+@import 'normalize.styl'
+
+
+
+
+
+
+/*------------------------------------*\
+    $FONT-FACE
+\*------------------------------------*/
+@import 'fuentes.styl'
+
+
+
+
+
+/*------------------------------------*\
+    $NIB
+\*------------------------------------*/
+@import "nib"
+
+
+
+
+/*------------------------------------*\
+    $variables
+\*------------------------------------*/
+azul = #00599a
+blanco = #fff
+gris = #788d97
+negro = #333333
+vendor-prefixes = webkit o ms moz official
+
+
+
+
+
+
+
+/*------------------------------------*\
+    $MIXINS
+\*------------------------------------*/
+cursiva()
+  font-style italic
+
+may()
+  text-transform uppercase
+
+bold()
+  font-weight bold
+
+block()
+  display block
+
+centrar()
+  margin 0 auto
+  block()
+
+alinear()
+   display inline-block
+   vertical-align top
+   zoom 1
+
+font-regular()
+  font-family 'aeroregular', sans-serif
+
+font-light()
+  font-family 'latolight', sans-serif
+
+font(valor)
+  font-size valor
+
+box()
+  box-sizing border-box
+
+
+
+
+
+
+
+
+/*------------------------------------*\
+    $CLASES GLOBALES
+\*------------------------------------*/
+.left
+  float left
+
+.right
+  float right
+
+.border
+  border 1px solid rojo
+
+.clear
+  clear both
+
+.relative
+	position relative
+
+.padding
+	padding 1em
+
+
+/*------------------------------------*\
+    $POP-UPS
+\*------------------------------------*/
+
+
+
+
+
+/*------------------------------------*\
+    $BODY Y CONTAINER
+\*------------------------------------*/
+body
+  background blanco
+  color negro
+  font-regular()
+
+.wrapper
+  width 1000px
+  centrar()
+
+
+/*------------------------------------*\
+    $LOADER
+\*------------------------------------*/
+
+
+
+
+
+
+/*------------------------------------*\
+    $HEADER
+\*------------------------------------*/
+
+header
+  box-shadow #ccc 4px 0px 4px
+  position absolute
+  top 0
+  left 0
+  right 0
+  z-index 9999
+  background blanco
+
+
+h1
+  float left
+  margin-top 11px
+nav
+  float right
+  li
+    float left
+  a
+    may()
+    color negro
+    border-bottom 2px solid transparent
+    transition .3s
+    height 55px
+    line-height 55px
+    padding 0 10px
+    block()
+    &:hover
+    &:active
+      border-color negro
+
+
+
+/*------------------------------------*\
+    $HOME
+\*------------------------------------*/
+.contenedor-slider
+  position relative
+  height 700px
+  overflow hidden
+  .owl-prev
+  .owl-next
+    position absolute
+    top 45%
+    width 73px
+    height 90px
+    z-index 999
+    background url(../imgs/slider/flecha.png) 0 0 no-repeat
+    margin-top -46px
+    text-indent: -9999px;
+    cursor pointer
+  .owl-prev
+    left 2%
+  .owl-next
+    background-position -97px 0
+    right 2%
+
+
+    
+
+
+
+
+
+
+/*------------------------------------*\
+    $FOOTER
+\*------------------------------------*/
+footer
+  background negro
+  color blanco
+  text-align center
+  padding 10px
+  a
+    color blanco
+    &:hover
+      text-decoration underline
+  p
+    margin 0
+
+
+
+
+/*------------------------------------*\
+    $MEDIAQUIERIES
+\*------------------------------------*/
